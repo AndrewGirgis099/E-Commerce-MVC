@@ -1,0 +1,17 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Employee Details</h1>
+<br />
+<br />
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <Partial name="PartialViews/DetailsDeleteViewPartial" />
+
+
+    <input type="submit" value="Edit" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+

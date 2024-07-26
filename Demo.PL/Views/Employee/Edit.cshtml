@@ -1,0 +1,29 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Employee</h1>
+<br />
+<br />
+
+<form asp-action="Edit" asp-route-id="@Model.Id" enctype="multipart/form-data">
+    <div>
+        <img src="~/Files/Images/@Model.ImageName" class="rounded rounded-circle mb-2" width="100" />
+    </div>
+
+    <div asp-validation-summary="All"></div>
+    <partial name="PartialViews/CreateEditViewPratial" />
+
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+
+@section validateScriptSection {
+   @*  <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
+    <partial name="_ValidationScriptsPartial" />
+}
+

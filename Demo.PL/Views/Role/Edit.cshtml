@@ -1,0 +1,25 @@
+﻿@model RoleViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit Role</h1>
+<br />
+<br />
+
+<form asp-action="Edit" asp-route-id="@Model.Id" enctype="multipart/form-data">
+   
+
+    <div asp-validation-summary="All"></div>
+    <partial name="PartialViews/CreateEditViewPratial" />
+
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+
+
+
+
